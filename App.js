@@ -13,8 +13,14 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <Scene key="root">
-          <Scene key="home" component={Home} title="Início" />
+        <Scene key="tabbar" tabs initial animationEnabled={true} swipeEnabled={true}>
+          <Scene key="Principal">
+            <Scene key="inicio" component={Home} title="Início" />
+          </Scene>
+
+          <Scene key="Principal2">
+            <Scene key="inicio2" component={Home} title="Início 2" />
+          </Scene>
         </Scene>
       </Router>
     );

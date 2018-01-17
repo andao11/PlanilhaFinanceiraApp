@@ -13,7 +13,9 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <Scene key="home" component={Home} title="Início" />
+        <Scene key="root">
+          <Scene key="home" component={Home} title="Início" />
+        </Scene>
       </Router>
     );
   }

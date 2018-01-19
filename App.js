@@ -7,12 +7,13 @@ import { Scene, Router } from 'react-native-router-flux';
 
 //------------------------------------------------ SCREENS
 import Home from './screens/Home';
+import Gastos from './screens/Gastos';
 //--------------------------------------------------------
 
 //--------------------------------------------- COMPONENTS
 import IconComponent from './components/IconComponent';
 import ModalHome from './screens/modals/ModalHome';
-import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
+import TestModal from './screens/TestModal';
 //--------------------------------------------------------
 
 /* TAB BAR SETTINGS */
@@ -27,8 +28,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <Scene key="modal" modal
-          transitionConfig={() => ({ screenInterpolator: CardStackStyleInterpolator.forFadeFromBottomAndroid })}>
+        <Scene key="modal" modal>
 
           <Scene key="root" hideNavBar hideNavBar>
 
@@ -42,16 +42,16 @@ export default class App extends React.Component {
               inactiveTintColor={COLOR_INACTIVE_TAB}>
 
               <Scene key="Principal" title="Home" iconName="home" icon={IconComponent}>
-                <Scene key="inicio" component={Home} title="Início" />
+                <Scene key="inicio" component={Home} title="Bem-vindo" />
               </Scene>
 
               <Scene key="Gastos" title="Gastos" iconName="line-chart" icon={IconComponent}>
-                <Scene key="inicio2" component={Home} title="Gastos"  />
+                <Scene key="inicioGastos" component={Gastos} title="Financeiro"  />
               </Scene>
 
             </Scene>
 
-            <Scene key="homeModal" component={ModalHome} title="Modal" hideNavBar />
+            <Scene key="homeModal" component={TestModal} title="Modal" hideNavBar />
 
           </Scene>
 

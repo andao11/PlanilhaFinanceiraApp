@@ -74,7 +74,8 @@ export default class Home extends Component {
                         icon={{ name: 'history', type: 'font-awesome' }}
                         backgroundColor="green"
                         title='ÚLTIMAS 24 HORAS'
-                        onPress={() => Actions.homeModal({hide: false})} />
+                        onPress={() => Actions.homeModal({hide: false})}/>
+                    <View style={{marginBottom: 15}} />
                 </ScrollView>
             </View>
         )
